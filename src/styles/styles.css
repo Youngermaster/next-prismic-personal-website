@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+*:root {
+  --aura-font-stack: "Bai Jamjuree", sans-serif;
+  --coco-cold-grey: #31333b;
+  --coco-bright-grey: #3d3e42;
+  --coco-grey: #34353a;
+  --coco-golden: #ffc86b;
+}
+html {
+  font-family: var(--aura-font-stack);
+  line-height: 1.45;
+}
+
+.cold-grey {
+  background-color: var(--coco-cold-grey) !important;
+}
+
+.bright-grey {
+  background-color: var(--coco-bright-grey) !important;
+}
+
+.grey {
+  background-color: var(--coco-grey) !important;
+}
+
+.golden-text{
+  color: var(--coco-golden);
+}
+
+.golden-border{
+  border-color: var(--coco-golden);
+}
+
+.mauto{
+  margin: 0 auto;
+}
+
+.button:active,
+.button-fill:active,
+.button-pill:active,
+.button-link:active,
+.button-menu:active {
+  transform: scale(0.97);
+  outline: none;
+}
+
+a:active {
+  outline:  none;
+  transform: scale(0.97) !important;
+}
+
+.nav-list a:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  color: var(--coco-golden) !important;
+} 
+
+.pdb0{
+  padding-bottom: 0;
+}
+
+.box-transition{
+  position: relative;
+}
+
+.grey.box-transition{
+  box-shadow: 0px 5px 20px 10px var(--coco-grey);
+}
+
+.bright-grey.box-transition{
+  box-shadow: 0px 5px 20px 10px var(--coco-bright-grey);
+}

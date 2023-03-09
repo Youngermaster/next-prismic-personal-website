@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import profile from "../../public/Foto.png"
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,109 +16,121 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main className='page-pancake black white-text'>
+
+
+        <header className="grey">
+          <nav className="nav-list smush mauto">
+            <div className="item">logo</div>
+            <div>
+              <a className="white-text item mod-detail">About</a>
+              <a className="white-text item mod-detail">Skills</a>
+              <a className="white-text item mod-detail">Portfolio</a>
+              <a className="white-text item mod-detail">Experience</a>
+              <a className="white-text item mod-detail">Let's Talk</a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/Guerrita"
+                className="white-text item mod-detail"
+              ><span></span>Github</a>
+              <a
+                href="https://www.linkedin.com/in/andres-guerra-montoya/"
+                className="white-text item mod-detail"
+              ><span></span>Linkedin</a>
+              <a className="white-text item mod-detail"><span></span>WhatsApp</a>
+              <a className="white-text item mod-detail"
+              ><span></span>Modo noche/modo dia</a>
+            </div>
+          </nav>
+        </header>
+
+        <section className="grey box-transition pad pdb0 ">
+          <div className="smush aureole blog ">
+            <div className="valign centertxt">
+              <h1 className="mb13 golden-text">Andres Guerra Montoya</h1>
+              <h2 className="mb13">Junior Web developer</h2>
+              <a className="button-fill mt13 smish mauto golden-border"
+              ><span className="container golden-text">Contact Me</span></a>
+            </div>
+            <div className="centertxt">
+              <img src="/Foto.png" className="vfluid"/>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        <section className="bright-grey box-transition pad">
+          <div className="smush">
+            <h2 id="about">About</h2>
+            <p className='aura'>
+              I am a sixth-semester student of Systems Engineering at Eafit University, with a strong interest in Data Science, Back-end adn Front-end development. Currently, I am in the process of training in theese areas using Python, React.js and Node.js on the Platzi platform, where I have been acquiring practical skills that allow me to apply my knowledge in real projects.
+              <br />In addition, I am complementing my statistical training on HackerRank to further improve my analytical skills.
+              I consider myself a passionate person for learning and programming, which has led me to maintain great enthusiasm for acquiring greater experience in the field of Data Science.
+              I am a proactive person, with effective communication and teamwork skills, which has allowed me to perform efficiently in collaborative projects.<br/>
+              Also, I am a results-oriented person, which motivates me to work autonomously and constantly seek innovative solutions to the problems that arise.
+              I am confident that my soft skills will allow me to perform outstandingly in any project or job related to Data Science.
+            </p>
           </div>
+        </section>
+        <section className="cold-grey pad" id="education">
+          <div className="smush ">
+            <h2>Education an Certificates</h2>
+            <div className='aureole two'>
+            <div className='aura'>
+              <h3>Bachelor's degree</h3>
+              <ul className='aura'>
+              <li>Systems Engenieer, Eafit</li>
+              <li>Gradutation date: December 2024</li>
+            </ul>
+            </div>
+            <div className='aura'>
+              <h3>Certificates</h3>
+              <ul className='aura'>
+              <li>Systems Engenieer, Eafit</li>
+              <li>Gradutation date: December 2024</li>
+            </ul>
+            </div>
+            </div>
+          </div>
+        </section>
+        <section className="cold-grey" id="skills">
+          <div className="smush">
+            <h2>My Skills</h2>
+            <div className='aura'>
+              <div><h3>Technical skills</h3></div>
+              <article>
+                <div>
+                  <img src={profile} alt="" />
+                </div>
+                <h4></h4>
+                <p></p>
+              </article>
+              <div><h3>Soft skills</h3></div></div>
+          </div>
+        </section>
+        <section className="grey " id="portfolio">
+          <div className="smush"><h2>Portfolio</h2>
+            <div className='aura'></div>
+          </div>
+        </section>
+        <section className="bright-grey" id="experience">
+          <div className="smush"><h2>Experience</h2>
+            <div className='aura'></div></div>
+        </section>
+        <section id="contact">
+          <div className="smush"><h2>Contact Me</h2>
+            <div className='aura'></div>
+          </div>
+        </section>
+
+        <footer className="black">
+        <div className='smush'>
+                    <h2>
+            Esto es un footer
+          </h2>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        </footer>
       </main>
     </>
   )
