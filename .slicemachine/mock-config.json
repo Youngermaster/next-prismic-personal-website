@@ -1,0 +1,24 @@
+{
+  "slices": {
+    "PresentationBanner": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Skills": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "SimpleContent": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  },
+  "_cts": {
+    "home": {}
+  }
+}
