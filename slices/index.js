@@ -3,15 +3,18 @@
 import PresentationBanner from './PresentationBanner';
 import SimpleContent from './SimpleContent';
 import Skills from './Skills';
+import TwoColumnTitleTex from './TwoColumnTitleTex';
 
 export {
 	PresentationBanner,
 	SimpleContent,
 	Skills,
+	TwoColumnTitleTex,
 };
 
 export const components = {
 	presentation_banner: PresentationBanner,
 	simple_content: SimpleContent,
 	skills: Skills,
+	two_column_title_tex: TwoColumnTitleTex,
 };

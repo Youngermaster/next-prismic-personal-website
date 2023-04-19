@@ -1,0 +1,55 @@
+{
+  "id": "two_column_title_tex",
+  "type": "SharedSlice",
+  "name": "TwoColumnTitleTex",
+  "description": "TwoColumnTitleTex",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TwoColumnTitleTex",
+      "primary": {
+        "title_one": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title_One",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "description_one": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description_One",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "title_two": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title_Two",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "description_two": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description_Two",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

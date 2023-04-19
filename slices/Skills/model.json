@@ -10,7 +10,17 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Skills",
-      "primary": {},
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        }
+      },
       "items": {
         "image": {
           "type": "Image",
@@ -26,16 +36,7 @@
             "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading4"
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "heading6"
           }
         }
       },

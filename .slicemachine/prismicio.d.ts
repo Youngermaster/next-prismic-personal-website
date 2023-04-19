@@ -166,6 +166,22 @@ type SimpleContentSliceVariation = SimpleContentSliceDefault;
  */
 export type SimpleContentSlice = prismicT.SharedSlice<"simple_content", SimpleContentSliceVariation>;
 /**
+ * Primary content in Skills → Primary
+ *
+ */
+interface SkillsSliceDefaultPrimary {
+    /**
+     * Title field in *Skills → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: skills.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
  * Item in Skills → Items
  *
  */
@@ -190,16 +206,6 @@ export interface SkillsSliceDefaultItem {
      *
      */
     title: prismicT.TitleField;
-    /**
-     * description field in *Skills → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: skills.items[].description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
 }
 /**
  * Default variation for Skills Slice
@@ -209,7 +215,7 @@ export interface SkillsSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type SkillsSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<SkillsSliceDefaultItem>>;
+export type SkillsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SkillsSliceDefaultPrimary>, Simplify<SkillsSliceDefaultItem>>;
 /**
  * Slice variation for *Skills*
  *
@@ -224,11 +230,80 @@ type SkillsSliceVariation = SkillsSliceDefault;
  *
  */
 export type SkillsSlice = prismicT.SharedSlice<"skills", SkillsSliceVariation>;
+/**
+ * Primary content in TwoColumnTitleTex → Primary
+ *
+ */
+interface TwoColumnTitleTexSliceDefaultPrimary {
+    /**
+     * Title_One field in *TwoColumnTitleTex → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: two_column_title_tex.primary.title_one
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_one: prismicT.TitleField;
+    /**
+     * Description_One field in *TwoColumnTitleTex → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: two_column_title_tex.primary.description_one
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description_one: prismicT.RichTextField;
+    /**
+     * Title_Two field in *TwoColumnTitleTex → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: two_column_title_tex.primary.title_two
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_two: prismicT.TitleField;
+    /**
+     * Description_Two field in *TwoColumnTitleTex → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: two_column_title_tex.primary.description_two
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description_two: prismicT.RichTextField;
+}
+/**
+ * Default variation for TwoColumnTitleTex Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TwoColumnTitleTex`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TwoColumnTitleTexSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TwoColumnTitleTexSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *TwoColumnTitleTex*
+ *
+ */
+type TwoColumnTitleTexSliceVariation = TwoColumnTitleTexSliceDefault;
+/**
+ * TwoColumnTitleTex Shared Slice
+ *
+ * - **API ID**: `two_column_title_tex`
+ * - **Description**: `TwoColumnTitleTex`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TwoColumnTitleTexSlice = prismicT.SharedSlice<"two_column_title_tex", TwoColumnTitleTexSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, PresentationBannerSliceDefaultPrimary, PresentationBannerSliceDefault, PresentationBannerSliceVariation, PresentationBannerSlice, SimpleContentSliceDefaultPrimary, SimpleContentSliceDefault, SimpleContentSliceVariation, SimpleContentSlice, SkillsSliceDefaultItem, SkillsSliceDefault, SkillsSliceVariation, SkillsSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, PresentationBannerSliceDefaultPrimary, PresentationBannerSliceDefault, PresentationBannerSliceVariation, PresentationBannerSlice, SimpleContentSliceDefaultPrimary, SimpleContentSliceDefault, SimpleContentSliceVariation, SimpleContentSlice, SkillsSliceDefaultPrimary, SkillsSliceDefaultItem, SkillsSliceDefault, SkillsSliceVariation, SkillsSlice, TwoColumnTitleTexSliceDefaultPrimary, TwoColumnTitleTexSliceDefault, TwoColumnTitleTexSliceVariation, TwoColumnTitleTexSlice };
     }
 }

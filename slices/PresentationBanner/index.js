@@ -10,7 +10,7 @@ import { PrismicLink } from '@prismicio/react'
 const PresentationBanner = ({ slice }) => (
 
 
-    <section className="grey box-transition pad pdb0 ">
+    <section className="grey pad pdb0 ">
           <div className="smush aureole blog ">
             <div className="valign centertxt">
             <div className="mb13 golden-text"><PrismicRichText field={slice.primary.title}/></div>

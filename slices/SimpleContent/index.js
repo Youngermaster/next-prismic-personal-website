@@ -7,7 +7,7 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { SimpleContentProps }
  */
 const SimpleContent = ({ slice }) => (
-  <section className="bright-grey box-transition pad ">
+  <section className="bright-grey pad ">
     <div className="smush">
       <PrismicRichText field={slice.primary.title} />
       <div className='aura'>

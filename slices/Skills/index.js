@@ -1,5 +1,6 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import SkillDetail from '@/components/SkillDetail'
 
 /**
  * @typedef {import("@prismicio/client").Content.SkillsSlice} SkillsSlice
@@ -7,29 +8,22 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { SkillsProps }
  */
 const Skills = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
+  <section className="cold-grey pad">
+    <div className="smush">
+      <PrismicRichText field={slice.primary.title} />
+      <div className='aura aureole'>
+        {
+          slice?.items?.map((skill, i) =>
+            <article className='bright-grey w-300 mod-detail centertxt mauto mt13 mb13'>
+              <div>
+                <img src={skill?.image.url} alt={skill?.image.alt} width="100" height="100" />
+              </div>
+              <PrismicRichText field={skill?.title} />
+            </article>
+          )
         }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+      </div>
+    </div>
   </section>
 )
 

@@ -16,6 +16,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "TwoColumnTitleTex": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
