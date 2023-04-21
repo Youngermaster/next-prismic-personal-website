@@ -29,16 +29,16 @@ export default function Home({ page }) {
           <div className="smush ">
             <h2>Education and Certificates</h2>
             <div className='aureole two'>
-              <div className='aura'>
+              <div className='coco'>
                 <h3>Bachelor's degree</h3>
-                <ul className='aura'>
+                <ul className='coco'>
                   <li>Systems Engenieer, Eafit</li>
                   <li>Gradutation date: December 2024</li>
                 </ul>
               </div>
-              <div className='aura'>
+              <div className='coco'>
                 <h3>Certificates</h3>
-                <ul className='aura'>
+                <ul className='coco'>
                   <li>Systems Engenieer, Eafit</li>
                   <li>Gradutation date: December 2024</li>
                 </ul>
@@ -49,19 +49,19 @@ export default function Home({ page }) {
 
         <section className="grey " id="portfolio">
           <div className="smush"><h2>Portfolio</h2>
-            <div className='aura'></div>
+            <div className='coco'></div>
           </div>
         </section>
         <section className="bright-grey" id="experience">
           <div className="smush">
             <h2>Experience</h2>
-            <div className='aura'><p>I'm a skilled professional with a strong background in web development, project management, and e-learning creation. My expertise in HTML, CSS, and JavaScript enables me to create outstanding front-end web applications. Furthermore, my experience with project management tools such as Notion, Gannt diagrams, and Backlogs proves my ability to manage projects and resources effectively.
+            <div className='coco'><p>I'm a skilled professional with a strong background in web development, project management, and e-learning creation. My expertise in HTML, CSS, and JavaScript enables me to create outstanding front-end web applications. Furthermore, my experience with project management tools such as Notion, Gannt diagrams, and Backlogs proves my ability to manage projects and resources effectively.
               Collaboration and version control skills are crucial in a team-based environment, and my experience with Git and GitHub highlights my proficiency in this area. Additionally, I have worked with e-learning platforms such as Moodle for well-known companies like Santillana, the British Council, DigiMENTE, and Fájate. My work with these platforms showcases my expertise in creating and managing online learning materials. Moreover, I am skilled in working with cloud-based technologies such as GCP and AWS.
               My experience in web development, project management, and e-learning creation makes me a valuable asset to any team in the technology industry. Companies are always looking for professionals who can develop high-quality websites and e-learning materials, manage projects, and collaborate effectively with others. Please feel free to explore my website to learn more about my skills, experience, and accomplishments.</p></div></div>
         </section>
         <section id="contact">
           <div className="smush"><h2>Contact Me</h2>
-            <div className='aura'></div>
+            <div className='coco'></div>
           </div>
         </section>
 

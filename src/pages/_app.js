@@ -1,4 +1,3 @@
-import "@aura-design/system/main.css";
 import "@/styles/styles.css";
 import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'

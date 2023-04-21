@@ -11,7 +11,7 @@ const Skills = ({ slice }) => (
   <section className="cold-grey pad">
     <div className="smush">
       <PrismicRichText field={slice.primary.title} />
-      <div className='aura aureole'>
+      <div className='coco aureole'>
         {
           slice?.items?.map((skill, i) =>
             <article className='bright-grey w-300 mod-detail centertxt mauto mt13 mb13'>

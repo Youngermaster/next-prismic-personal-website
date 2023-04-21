@@ -10,7 +10,7 @@ const SimpleContent = ({ slice }) => (
   <section className="bright-grey pad ">
     <div className="smush">
       <PrismicRichText field={slice.primary.title} />
-      <div className='aura'>
+      <div className='coco'>
         <PrismicRichText field={slice.primary.description} />
       </div>
     </div>
