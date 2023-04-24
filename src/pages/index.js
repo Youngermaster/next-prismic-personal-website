@@ -47,9 +47,29 @@ export default function Home({ page }) {
           </div>
         </section>
 
-        <section className="grey " id="portfolio">
+        <section className="grey pad" id="portfolio">
           <div className="smush"><h2>Portfolio</h2>
-            <div className='coco'></div>
+            <div className='aureole two'>
+              <div>
+                <div className='mod'>
+                  <a>
+                    <div className='mod-media zoom'>
+                    <span>
+                      <img src='https://somoskudasai.com/wp-content/uploads/2021/09/FADa0DnXIAAO35R.jpg' />
+                    </span>
+                    </div>
+                  </a>
+                  <div className='mod-detail black'>
+                    <a>
+                      <h3 className='mt0'>cowboy Bebop</h3>
+                    </a>
+                    <p className='mod-content'>
+                    El mundo del anime está lleno de grandes joyas que merecen ser visualizadas, como es el caso de Cowboy Bebop, un auténtico clásico que te proporciona un desarrollo de personajes muy profundo y una trama interesante y atractiva.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section className="bright-grey" id="experience">

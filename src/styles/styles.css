@@ -15,7 +15,7 @@
   --coco-text-primary: #030303;
   --coco-text-primary-inverse: #fff;
   --coco-module: var(--coco-accents-0);
-  --coco-outline: #0927ec solid 2px;
+  --coco-outline: var(--coco-golden) solid 2px;
   --coco-opacity: 0.5;
   --coco-input-radius: 6.5px;
   --coco-button-radius: 6.5px;
@@ -687,6 +687,16 @@ a:visited:not([class*="button-"]) {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.mod {
+  background-color: var(--coco-grey);
+  border-radius: var(--coco-radius);
+  -webkit-border-radius: var(--coco-radius);
+  -moz-border-radius: var(--coco-radius);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .golden-text{
