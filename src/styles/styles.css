@@ -120,7 +120,7 @@ div[data-type="static_image"] img {
 .uline {
   text-decoration: underline;
 }
-.ulinea a:not(.button-link, .button-fill) {
+.ulinea a:not(.button-fill) {
   text-decoration: underline;
 }
 .centertxt {
@@ -173,10 +173,6 @@ div[data-type="static_image"] img {
 .disabled,
 .button:disabled,
 .button-fill:disabled,
-.button-pill:disabled,
-.button-link:disabled,
-.button-menu:disabled,
-textarea:not(.default):disabled,
 input:not(.default):disabled,
 select:not(.default):disabled {
   opacity: var(--coco-opacity);
@@ -624,10 +620,7 @@ a:visited:not([class*="button-"]) {
 }
 
 .button,
-.button-fill,
-.button-pill,
-.button-link,
-.button-menu {
+.button-fill {
   cursor: pointer;
   box-sizing: border-box;
   margin: 0;
@@ -655,17 +648,11 @@ a:visited:not([class*="button-"]) {
 }
 
 .button:hover,
-.button-fill:hover,
-.button-pill:hover,
-.button-link:hover,
-.button-menu:hover {
+.button-fill:hover{
   transform: scale(1.03);
 }
 .button:active,
-.button-fill:active,
-.button-pill:active,
-.button-link:active,
-.button-menu:active {
+.button-fill:active{
   transform: scale(0.97);
   outline: var(--coco-outline);
 }
