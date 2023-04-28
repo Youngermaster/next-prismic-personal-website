@@ -34,6 +34,12 @@
             },
             "simple_content": {
               "type": "SharedSlice"
+            },
+            "two_column_title_tex": {
+              "type": "SharedSlice"
+            },
+            "portfolio": {
+              "type": "SharedSlice"
             }
           }
         }

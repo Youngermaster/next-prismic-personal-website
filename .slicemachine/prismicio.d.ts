@@ -35,7 +35,7 @@ interface HomeDocumentData {
  * Slice for *Home → Slice Zone*
  *
  */
-type HomeDocumentDataSlicesSlice = SkillsSlice | PresentationBannerSlice | SimpleContentSlice;
+type HomeDocumentDataSlicesSlice = SkillsSlice | PresentationBannerSlice | SimpleContentSlice | TwoColumnTitleTexSlice | PortfolioSlice;
 /**
  * Home document from Prismic
  *
@@ -47,6 +47,91 @@ type HomeDocumentDataSlicesSlice = SkillsSlice | PresentationBannerSlice | Simpl
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 export type AllDocumentTypes = HomeDocument;
+/**
+ * Primary content in Portfolio → Primary
+ *
+ */
+interface PortfolioSliceDefaultPrimary {
+    /**
+     * Title field in *Portfolio → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: portfolio.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
+ * Item in Portfolio → Items
+ *
+ */
+export interface PortfolioSliceDefaultItem {
+    /**
+     * image field in *Portfolio → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: portfolio.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * link field in *Portfolio → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: portfolio.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * Title field in *Portfolio → Items*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: portfolio.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Portfolio → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: portfolio.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Portfolio Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Portfolio`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PortfolioSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PortfolioSliceDefaultPrimary>, Simplify<PortfolioSliceDefaultItem>>;
+/**
+ * Slice variation for *Portfolio*
+ *
+ */
+type PortfolioSliceVariation = PortfolioSliceDefault;
+/**
+ * Portfolio Shared Slice
+ *
+ * - **API ID**: `portfolio`
+ * - **Description**: `Portfolio`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PortfolioSlice = prismicT.SharedSlice<"portfolio", PortfolioSliceVariation>;
 /**
  * Primary content in PresentationBanner → Primary
  *
@@ -304,6 +389,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, PresentationBannerSliceDefaultPrimary, PresentationBannerSliceDefault, PresentationBannerSliceVariation, PresentationBannerSlice, SimpleContentSliceDefaultPrimary, SimpleContentSliceDefault, SimpleContentSliceVariation, SimpleContentSlice, SkillsSliceDefaultPrimary, SkillsSliceDefaultItem, SkillsSliceDefault, SkillsSliceVariation, SkillsSlice, TwoColumnTitleTexSliceDefaultPrimary, TwoColumnTitleTexSliceDefault, TwoColumnTitleTexSliceVariation, TwoColumnTitleTexSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, PortfolioSliceDefaultPrimary, PortfolioSliceDefaultItem, PortfolioSliceDefault, PortfolioSliceVariation, PortfolioSlice, PresentationBannerSliceDefaultPrimary, PresentationBannerSliceDefault, PresentationBannerSliceVariation, PresentationBannerSlice, SimpleContentSliceDefaultPrimary, SimpleContentSliceDefault, SimpleContentSliceVariation, SimpleContentSlice, SkillsSliceDefaultPrimary, SkillsSliceDefaultItem, SkillsSliceDefault, SkillsSliceVariation, SkillsSlice, TwoColumnTitleTexSliceDefaultPrimary, TwoColumnTitleTexSliceDefault, TwoColumnTitleTexSliceVariation, TwoColumnTitleTexSlice };
     }
 }

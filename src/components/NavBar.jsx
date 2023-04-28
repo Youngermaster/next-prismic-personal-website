@@ -4,17 +4,11 @@ import Image from 'next/image'
 
 const NavBar = () => {
   return (
-    <header className="grey">
+    <header className="black">
       <nav className="nav-list smush mauto">
-        <div className="item "><Image src="/logo.png" className='valign' height="30" width="30"/></div>
-        {/* <div>
-        <a className="white-text item mod-detail">About</a>
-        <a href='#skills'  className="white-text item mod-detail">Skills</a>
-        <a className="white-text item mod-detail">Portfolio</a>
-        <a className="white-text item mod-detail">Experience</a>
-        <a className="white-text item mod-detail">Let's Talk</a>
-      </div> */}
-
+        <div className="item ">
+          <Image src="/logo.png" className='valign' height="30" width="30" />
+        </div>
         <div className='nav-list'>
           <div >
             <a href="https://github.com/Guerrita" target='_blank' className="white-text item mod-detail valign">
@@ -22,10 +16,11 @@ const NavBar = () => {
             </a>
           </div>
           <div>
-          <a href="https://github.com/Guerrita" target='_blank' className="white-text item mod-detail">
+            <a href="https://github.com/Guerrita" target='_blank' className="white-text item mod-detail">
               <svg className='valign' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" /></svg>
             </a>
           </div>
+
         </div>
       </nav>
     </header>

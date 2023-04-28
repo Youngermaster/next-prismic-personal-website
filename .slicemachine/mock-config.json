@@ -21,6 +21,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "Portfolio": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
